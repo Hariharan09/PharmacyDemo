@@ -6,7 +6,7 @@ import {
   VALIDATE_USER,
   VALIDATE_USER_FAILURE,
   VALIDATE_USER_SUCCESS,
-} from '../ActionTypes';
+} from '../../../../Redux';
 
 /**
  * validateUser

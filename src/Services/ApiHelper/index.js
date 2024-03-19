@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import {load} from '@Utils';
+import {load} from '../../Utils';
 
 export const SERVER = 'https://devapp.lifepharmacy.com/api';
 

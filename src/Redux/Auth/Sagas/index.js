@@ -25,7 +25,7 @@ function* validateUserSaga(action) {
       yield call(action.payload.onSuccess(response));
     } else {
       yield put(hideLoader());
-      yield put(validateUserFailure(response.error_message));
+      yield put(validateUserFailure(response));
       yield call(action.payload.onError(response));
     }
   } catch (error) {
@@ -49,7 +49,7 @@ function* submitLoginOtpSaga(action) {
       yield call(action.payload.onSuccess(response));
     } else {
       yield put(hideLoader());
-      yield put(submitLoginOtpFailure(response.error_message));
+      yield put(submitLoginOtpFailure(response));
       yield call(action.payload.onError(response));
     }
   } catch (error) {

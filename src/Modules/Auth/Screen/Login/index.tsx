@@ -16,7 +16,7 @@ import {
 } from '../../../../Navigators';
 import {setRegisteredMobileNumber, validateUser} from '../../../../Redux';
 import {color} from '../../../../Theme';
-import {CUSTOMER, MOBILE_NUMBER_RULES, validate} from '../../../../Utils';
+import {CUSTOMER, getValidateError, MOBILE_NUMBER_RULES, validate} from '../../../../Utils';
 import {StackScreenProps} from '@react-navigation/stack';
 import {isEmpty} from 'lodash';
 import React, {FC, useState} from 'react';
@@ -33,10 +33,14 @@ export const Login: FC<
       phone: mobileNumber.value,
       name: name.value,
     };
+   
+
 
     const validation = validate(MOBILE_NUMBER_RULES, params);
 
     if (isEmpty(validation)) {
+            // navigate(NAVIGATE_SCREEN.otp);
+
       dispatch(
         validateUser({
           params,
@@ -50,7 +54,7 @@ export const Login: FC<
         }),
       );
     } else {
-      Toast(validation.mobile_number + '');
+      Toast(getValidateError(validation));
     }
   };
 

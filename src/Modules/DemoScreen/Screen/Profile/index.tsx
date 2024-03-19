@@ -12,7 +12,7 @@ const Profile: React.FC<{}> = ({}) => {
             source={
               'https://m.media-amazon.com/images/I/71ZkHZcNslL._AC_UF1000,1000_QL80_.jpg'
             }
-            isUri
+            isUri={'true'}
           />
           <Text margin-t={10} variant={'heading'} font-size={14}>
             {'Hariharan A'}

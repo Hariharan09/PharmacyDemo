@@ -6,7 +6,7 @@ import {
   SUBMIT_LOGIN_OTP,
   SUBMIT_LOGIN_OTP_FAILURE,
   SUBMIT_LOGIN_OTP_SUCCESS,
-} from '../ActionTypes';
+} from '../../../../Redux';
 import {AuthSliceStateProp} from '../../Interfaces';
 
 const initialState: AuthSliceStateProp = {
