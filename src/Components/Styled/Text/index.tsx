@@ -18,9 +18,9 @@ import {
   ViewStyle as ViewStyleProps,
   FlexStyle as FlexStyleProps,
 } from '../Css/interfaces';
-import {suffixPx} from '@Utils/Helper';
-import {fonts} from '@Utils';
-import {color} from '@Theme';
+import {suffixPx} from '../../../Utils/Helper';
+import {fonts} from '../../../Utils';
+import {color} from '../../../Theme';
 
 const defaultCss = `
   color: ${color.black}

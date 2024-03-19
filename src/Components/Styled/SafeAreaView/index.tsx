@@ -1,6 +1,5 @@
 import {SafeAreaView as View} from 'react-native';
 import styled from 'styled-components/native';
-import {suffixPx} from '@Utils';
 
 import {ShadowStyleIOS, TransformsStyle, FlexStyle, ViewStyle} from '../Css';
 

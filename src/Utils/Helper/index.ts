@@ -1,7 +1,7 @@
 import {transformProps} from '../../Components/Styled/Css/interfaces';
 import {keys} from 'lodash';
 import {Linking, Platform} from 'react-native';
-import {SERVER} from '@Services';
+import {SERVER} from '../../Services';
 
 export const suffixPx = (val?: string | number) => {
   if (typeof val === 'string') {

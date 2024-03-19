@@ -1,6 +1,6 @@
 import React from 'react';
 import {ActivityIndicator, View, StyleSheet} from 'react-native';
-import {color} from '@Theme';
+import {color} from '../../../Theme';
 import {useSelector} from 'react-redux';
 
 const AppLoader = ({}) => {

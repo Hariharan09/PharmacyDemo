@@ -10,19 +10,18 @@
  * if you're interested in adding screens and navigators.
  */
 
-import '@I18n';
-import '@Utils/IgnoreWarnings';
+
 import React from 'react';
 import {
   SafeAreaProvider,
   initialWindowMetrics,
 } from 'react-native-safe-area-context';
-import {AppNavigator} from '@Navigators';
-import {ErrorBoundary} from '@Modules';
-import {store, sagaMiddleware, rootSaga, persistor} from '@Redux';
+import {AppNavigator} from './src/Navigators';
+import {ErrorBoundary} from './src/Modules';
+import {store, sagaMiddleware, rootSaga, persistor} from './src/Redux';
 import {Provider} from 'react-redux';
-import {SafeAreaView, AppLoader} from '@Components';
-import {AppProvider} from '@Contexts';
+import {SafeAreaView, AppLoader} from './src/Components';
+import {AppProvider} from './src/Contexts';
 import {PersistGate} from 'redux-persist/integration/react';
 
 const PGate = PersistGate as any;

@@ -23,8 +23,8 @@ import {
   ImageStyle as ImageStyleProps,
   ViewStyle as ViewStyleProps,
 } from '../Css/interfaces';
-import {suffixPx} from '@Utils/Helper';
-import {color} from '@Theme/Color';
+import {suffixPx} from '../../../Utils';
+import {color} from '../../../Theme';
 
 
 const variantStyle = {

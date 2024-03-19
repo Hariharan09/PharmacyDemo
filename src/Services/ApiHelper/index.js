@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import {load} from '@Utils';
 
-export const SERVER = 'http://103.118.188.135:8006';
+export const SERVER = 'https://devapp.lifepharmacy.com/api';
 
 const axiosApi = axios.create({
   baseURL: SERVER,

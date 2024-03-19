@@ -1,7 +1,7 @@
-import {icons} from '@Assets';
-import {goBack} from '@Navigators/NavigationUtilities';
-import {Container, Text, Touchable, ImageView, Tag} from '@Components';
-import {color} from '@Theme';
+import {icons} from '../../../Assets';
+import {goBack} from '../../../Navigators';
+import {Container, Text, Touchable, ImageView} from '../../../Components';
+import {color} from '../../../Theme';
 import {DrawerActions, useNavigation} from '@react-navigation/native';
 import React, {FC} from 'react';
 import {HeaderProps} from './interface';
@@ -134,56 +134,15 @@ const Header: FC<HeaderProps> = ({
         </Container>
       )}
       {variant === 'companyHeader' && (
-        <Container
-          padding-h={15}
-          flex-d={'row'}
-          variant={'tool-bar'}
-          flex-ai={'center'}>
-          <Touchable
-            right={10}
-            padding={15}
-            accessibilityRole="button"
-            onPress={() => {
-              goBack();
-            }}>
-            <Container>
-              <ImageView
-                source={icons.leftArrow}
-                h={15}
-                w={15}
-                tint-c={color.black}
-              />
-            </Container>
-          </Touchable>
-
-          <Container
-            flex-as={'center'}
-            flex-jc={'center'}
-            flex-ai={'center'}
-            flex-w={'wrap'}>
-            <Text text-t={'uppercase'} letter-s={2} variant={'book'}>
+        <Container variant={'tool-bar'}>
+          <Container flex-as={'center'} flex-jc={'center'} flex-ai={'center'}>
+            <Text
+              margin-t={15}
+              text-t={'uppercase'}
+              letter-s={2}
+              variant={'bold'}>
               {heading}
             </Text>
-          </Container>
-          <Container flex={1} flex-d={'row'} flex-jc={'flex-end'}>
-            <Container margin-r={10}>
-              <Tag
-                variant={'call'}
-                onPress={() => {
-                  if (onCallPress) {
-                    onCallPress();
-                  }
-                }}
-              />
-            </Container>
-            <Tag
-              variant={'e-mail'}
-              onPress={() => {
-                if (onEmailPress) {
-                  onEmailPress();
-                }
-              }}
-            />
           </Container>
         </Container>
       )}

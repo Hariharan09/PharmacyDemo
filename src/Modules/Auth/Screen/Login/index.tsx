@@ -27,10 +27,11 @@ export const Login: FC<
 > = ({}) => {
   const dispatch = useDispatch();
   const mobileNumber = useInput('');
+  const name = useInput('');
   const validateUserBusinessApiHandler = () => {
     const params = {
       phone: mobileNumber.value,
-      name: CUSTOMER,
+      name: name.value,
     };
 
     const validation = validate(MOBILE_NUMBER_RULES, params);
@@ -43,7 +44,9 @@ export const Login: FC<
             dispatch(setRegisteredMobileNumber(mobileNumber));
             navigate(NAVIGATE_SCREEN.otp);
           },
-          onError: () => () => {},
+          onError: () => () => {
+            navigate(NAVIGATE_SCREEN.otp);
+          },
         }),
       );
     } else {
@@ -73,6 +76,11 @@ export const Login: FC<
               placeholder={'00000 00000'}
               maxLength={10}
               onChangeText={mobileNumber.onChange}
+            />
+            <CustomInput
+              type={'default'}
+              heading={'Name'}
+              onChangeText={name.onChange}
             />
           </Container>
         </Container>

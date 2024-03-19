@@ -1,7 +1,11 @@
-import {icons} from '@Assets';
-import {Container, ImageView, Text} from '@Components';
-import {translate} from '@I18n';
-import {AuthStackParamList, NAVIGATE_SCREEN, navigate} from '@Navigators';
+import {icons} from '../../../../Assets';
+import {Container, ImageView, Text} from '../../../../Components';
+import {
+  AuthStackParamList,
+  NAVIGATE_SCREEN,
+  NAVIGATE_TAB,
+  navigate,
+} from '../../../../Navigators';
 import {StackScreenProps} from '@react-navigation/stack';
 import React, {FC, useEffect} from 'react';
 import {useSelector} from 'react-redux';
@@ -20,9 +24,10 @@ export const Splash: FC<
   useEffect(() => {
     setTimeout(() => {
       if (loginDetails?.isLoggedIn) {
-        navigate(NAVIGATE_SCREEN['home-stack'], true);
+        navigate(NAVIGATE_SCREEN['home-tab'], true);
       } else {
         navigate(NAVIGATE_SCREEN.login, true);
+        // navigate(NAVIGATE_TAB['home-tab'], true);
       }
     }, 3000);
   }, []);

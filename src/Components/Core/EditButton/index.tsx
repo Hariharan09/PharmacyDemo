@@ -1,8 +1,8 @@
 import React from 'react';
 import {EditButtonProps} from './interface';
-import {Container, Text, Touchable, ImageView} from '@Components';
-import {icons} from '@Assets';
-import {color} from '@Theme';
+import {Container, Text, Touchable, ImageView} from '../../../Components';
+import {icons} from '../../../Assets';
+import {color} from '../../../Theme';
 
 const EditButton: React.FC<EditButtonProps> = ({}) => {
   return (

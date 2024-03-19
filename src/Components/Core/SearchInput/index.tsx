@@ -1,8 +1,14 @@
-import {icons} from '@Assets';
-import {translate} from '@I18n';
-import {Container, Image, Input, Text, Touchable, ImageView} from '@Components';
-import {color} from '@Theme';
-import {fonts} from '@Utils';
+import {icons} from '../../../Assets';
+import {
+  Container,
+  Image,
+  Input,
+  Text,
+  Touchable,
+  ImageView,
+} from '../../../Components';
+import {color} from '../../../Theme';
+import {fonts} from '../../../Assets';
 import {debounce} from 'lodash';
 import React, {useState} from 'react';
 import {SearchInputProps} from './interfaces';
@@ -49,25 +55,24 @@ const SearchInput: React.FC<SearchInputProps> = ({
       flex-d={'row'}
       flex-jc={'space-evenly'}
       flex-ac={'stretch'}>
-      {searchString !== '' && (
-        <Touchable
-          flex-jc={'center'}
-          margin-l={15}
-          accessibilityRole="button"
-          onPress={handleOnPress}>
-          <ImageView
-            tint-c={color.coolGrey}
-            w={15}
-            h={15}
-            source={icons.search}
-          />
-        </Touchable>
-      )}
+      <Touchable
+        flex-jc={'center'}
+        margin-l={15}
+        accessibilityRole="button"
+        onPress={handleOnPress}>
+        <ImageView
+          tint-c={color.coolGrey}
+          w={18}
+          h={18}
+          source={icons.search}
+        />
+      </Touchable>
+
       <Container flex={1}>
         <Input
           variant={'default'}
           defaultValue={searchString}
-          placeholder={translate('auth.search')}
+          placeholder={'search'}
           placeholderTextColor={color.coolGrey}
           onChangeText={handleOnChangeText}
         />
@@ -87,30 +92,6 @@ const SearchInput: React.FC<SearchInputProps> = ({
           />
         </Touchable>
       )}
-      <Container variant={'divider-v'} />
-      <Touchable
-        padding={5}
-        margin-r={6}
-        w={110}
-        onPress={() => {
-          if (onSortClick) {
-            onSortClick();
-          }
-        }}
-        accessibilityRole="button"
-        flex-jc={'space-evenly'}
-        flex-ai={'center'}
-        flex-d={'row'}>
-        <Text font-family={fonts.book} font-size={14} color={color.black}>
-          {heading}
-        </Text>
-
-        <Image
-          source={icons.downArrowOutline}
-          tint-c={color.black}
-          accessibilityIgnoresInvertColors={false}
-        />
-      </Touchable>
     </Container>
   );
 };

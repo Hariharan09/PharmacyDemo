@@ -1,4 +1,4 @@
-const AUTH = 'https://devapp.lifepharmacy.com/api/auth/';
+const AUTH = '/auth/';
 
 /**
  * authentication

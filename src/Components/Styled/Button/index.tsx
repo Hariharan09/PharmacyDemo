@@ -5,7 +5,7 @@ import {
   ViewProps,
 } from 'react-native';
 import styled, {css} from 'styled-components/native';
-import {suffixPx} from '@Utils/Helper';
+import {suffixPx} from '../../../Utils/Helper';
 import {
   ButtonVariants,
   TouchableVariants,
@@ -13,8 +13,8 @@ import {
   ButtonTextProps,
   TouchableProps,
 } from './interfaces';
-import {color} from '@Theme';
-import {fonts} from '@Utils';
+import {color} from '../../../Theme';
+import {fonts} from '../../../Utils';
 
 import {
   ShadowStyleIOS,
@@ -32,7 +32,7 @@ import {
 } from '../Css/interfaces';
 
 const CatalinaBlueBg = `
-  background-color: ${color.primaryButton};
+  background-color: ${color.green};
 `;
 
 const getContainerBaseVariant = `

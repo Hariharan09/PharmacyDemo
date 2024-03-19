@@ -1,7 +1,6 @@
 import React, {ErrorInfo} from 'react';
 import {TextStyle, View, ViewStyle, ScrollView, Text} from 'react-native';
-import {color} from '@Theme';
-import {translate} from '@I18n';
+import {color} from '../../../Theme';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const CONTAINER: ViewStyle = {
@@ -52,10 +51,8 @@ export interface ErrorComponentProps {
 export const ErrorComponent = (props: ErrorComponentProps) => {
   return (
     <View style={CONTAINER}>
-      <Text style={TITLE_ERROR}>{translate('errorScreen.title')}</Text>
-      <Text style={TITLE_ERROR}>
-        {translate('errorScreen.friendlySubtitle')}
-      </Text>
+      <Text style={TITLE_ERROR}>{'errorScreen.title'}</Text>
+      <Text style={TITLE_ERROR}>{'errorScreen.friendlySubtitle'}</Text>
 
       <View style={ERROR_DETAILS_CONTAINER}>
         <ScrollView>
@@ -68,7 +65,7 @@ export const ErrorComponent = (props: ErrorComponentProps) => {
         accessibilityRole="button"
         style={BTN_RESET}
         onPress={props.onReset}>
-        <Text>{translate('errorScreen.reset')}</Text>
+        <Text>{'errorScreen.reset'}</Text>
       </TouchableOpacity>
     </View>
   );

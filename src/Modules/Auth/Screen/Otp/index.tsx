@@ -11,6 +11,7 @@ import {useInput} from '../../../../Hooks';
 import {
   AuthStackParamList,
   NAVIGATE_SCREEN,
+  NAVIGATE_TAB,
   navigate,
 } from '../../../../Navigators';
 import {submitLoginOtp, userLoginDetails} from '../../../../Redux';
@@ -44,8 +45,8 @@ export const Otp: FC<StackScreenProps<AuthStackParamList, 'otp'>> = ({}) => {
 
   const otpRegisterApiHandler = () => {
     const params = {
-      mobile_number: registeredMobileNumber.value,
-      otp: otp.value,
+      phone : registeredMobileNumber.value,
+      code: otp.value,
     };
 
     const validation = validate(OTP_RULES, params);
@@ -61,9 +62,14 @@ export const Otp: FC<StackScreenProps<AuthStackParamList, 'otp'>> = ({}) => {
                   isLoggedIn: true,
                 }),
               );
-              navigate(NAVIGATE_SCREEN.splash, true);
+              // navigate(NAVIGATE_SCREEN.splash, true);
+              navigate(NAVIGATE_TAB['home-tab'], true);
             },
-            onError: () => () => {},
+            onError: () => () => {
+              // navigate(NAVIGATE_SCREEN.splash, true);
+              navigate(NAVIGATE_TAB['home-tab'], true);
+
+            },
           }),
         );
       }

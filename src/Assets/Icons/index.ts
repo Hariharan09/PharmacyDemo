@@ -6,5 +6,7 @@ export const icons = {
   profile: require('./Profile/icon.png'),
   profileBlack: require('./ProfileBlack/icon.png'),
   logo: require('./Logo/icon.png'),
+  search: require('./Search/icon.png'),
+  addFill: require('./AddFill/icon.png')
 }
 

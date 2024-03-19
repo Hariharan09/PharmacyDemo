@@ -7,7 +7,7 @@ import React, {useState} from 'react';
 import {Category, HomesTab, Profile} from '../../../Modules';
 
 export type HomeTabParamList = {
-  home: undefined;
+  'homes-tab': undefined;
   category: undefined;
   profile: undefined;
 };
@@ -26,9 +26,9 @@ const bottomNavItem: Array<NavItem> = [
   {
     id: 1,
     title: 'HOME',
-    iconSelected: icons.home,
-    iconDefault: icons.homeFill,
-    navigate: NAVIGATE_SCREEN['home-tab'],
+    iconSelected: icons.homeFill,
+    iconDefault: icons.home,
+    navigate: NAVIGATE_SCREEN['homes-tab'],
   },
   {
     id: 2,
@@ -40,8 +40,8 @@ const bottomNavItem: Array<NavItem> = [
   {
     id: 3,
     title: 'PROFILE',
-    iconSelected: icons.profile,
-    iconDefault: icons.profileBlack,
+    iconSelected: icons.profileBlack,
+    iconDefault: icons.profile,
     navigate: NAVIGATE_SCREEN.profile,
   },
 ];
@@ -65,8 +65,7 @@ const TabBar: React.FC<TabBarProps> = ({selected, onPress, navigation}) => {
               onPress={() => {
                 if (onPress) {
                   onPress(item.id);
-
-                  // navigation.navigate(item.navigate);
+                  navigation.navigate(item.navigate);
                 }
               }}
               accessibilityRole="button"
@@ -86,7 +85,7 @@ const TabBar: React.FC<TabBarProps> = ({selected, onPress, navigation}) => {
                 margin-t={5}
                 text-t={'uppercase'}
                 variant={selected === item.id ? 'bold' : 'book'}
-                font-size={8}>
+                font-size={9}>
                 {item.title}
               </Text>
             </Touchable>
@@ -96,6 +95,8 @@ const TabBar: React.FC<TabBarProps> = ({selected, onPress, navigation}) => {
     </>
   );
 };
+
+
 const HomeTab: React.FC = () => {
   const [bottomSelected, setBottomSelected] = useState(TAB_SERVICE);
   return (
@@ -105,16 +106,17 @@ const HomeTab: React.FC = () => {
           headerShown: false,
           tabBarShowLabel: false,
         }}
+        // eslint-disable-next-line react/no-unstable-nested-components
         tabBar={props => (
           <TabBar
             {...props}
             selected={bottomSelected}
             onPress={index => {
-              setBottomSelected(index);
+           setBottomSelected(index);
             }}
           />
         )}>
-        <Home.Screen name={'home'} component={HomesTab} />
+        <Home.Screen name={'homes-tab'} component={HomesTab} />
         <Home.Screen name={'category'} component={Category} />
         <Home.Screen name={'profile'} component={Profile} />
       </Home.Navigator>

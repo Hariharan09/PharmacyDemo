@@ -7,8 +7,8 @@ import {
   SUBMIT_LOGIN_OTP,
   submitLoginOtpSuccess,
   submitLoginOtpFailure,
-} from '@Redux';
-import {validateUserApi, submitLoginOtpApi} from '@Services';
+} from '../../../Redux';
+import {validateUserApi, submitLoginOtpApi} from '../../../Services';
 import {call, put, takeLatest} from 'redux-saga/effects';
 
 /**

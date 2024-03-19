@@ -1,10 +1,10 @@
 import React from 'react';
 import {AlertProps} from './interfaces';
-import {Container, Image, Text} from '@Components';
+import {Container, Image, Text} from '../../../Components';
 import {TouchableOpacity, TouchableWithoutFeedback} from 'react-native';
-import {icons} from '@Assets';
-import {color} from '@Theme';
-import {fonts} from '@Utils';
+import {icons} from '../../../Assets';
+import {color} from '../../../Theme';
+import {fonts} from '../../../Utils';
 
 const Alert: React.FC<AlertProps> = ({
   visible,

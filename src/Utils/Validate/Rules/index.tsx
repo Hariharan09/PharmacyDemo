@@ -9,7 +9,7 @@ export const MOBILE_NUMBER_RULES = {
 };
 
 export const OTP_RULES = {
-  otp: {
+  code: {
     presence: {message: 'Otp cannot be empty'},
     length: {is: 4, message: 'Otp should be 4 number'},
   },

@@ -10,8 +10,8 @@ import {
   FlexStyle as FlexStyleProps,
   ViewStyle as ViewStyleProps,
 } from '../Css/interfaces';
-import {color} from '@Theme';
-import {suffixPx} from '@Utils';
+import {color} from '../../../Theme';
+import {suffixPx} from '../../../Utils';
 
 const getContainerBaseVariant = `
   border-radius: ${suffixPx(10)};
@@ -57,7 +57,7 @@ const containerStyle = {
     background-color: ${color.white};
     justify-content: center;
     align-items: center;
-    height: ${suffixPx(40)};
+    height: ${suffixPx(50)};
     border-radius: ${suffixPx(25)};
   `,
   'rounded-cart': css`
@@ -115,7 +115,7 @@ const containerStyle = {
   `,
   'tool-bar': css`
     height: ${suffixPx(50)};
-    background-color: ${color.ActionGrey};
+    background-color: ${color.ufoGreen};
   `,
   add: css`
     margin-top: ${suffixPx(10)};
@@ -174,7 +174,7 @@ const containerStyle = {
     left: 0;
     right: 0;
     bottom: ${suffixPx(20)};
-    background-color: ${color.secondary};
+    background-color: ${color.wageningenGreen};
     flex-direction: row;
     justify-content: space-between;
     margin-horizontal: ${suffixPx(30)};

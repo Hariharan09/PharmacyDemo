@@ -1,7 +1,7 @@
 import React from 'react';
-import {Text, Input} from '@Components';
+import {Text, Input} from '../../../Components';
 import {CustomInputProps} from './interface';
-import {color} from '@Theme';
+import {color} from '../../../Theme';
 
 const CustomInput = React.forwardRef(
   (

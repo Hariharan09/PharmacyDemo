@@ -1,7 +1,7 @@
 import {TextInput, TextInputProps} from 'react-native';
 import styled, {css} from 'styled-components/native';
 
-import {fonts, suffixPx} from '@Utils';
+import {fonts, suffixPx} from '../../../Utils';
 import {InputProps, Variants} from './interfaces';
 
 import {
@@ -19,7 +19,7 @@ import {
   ViewStyle as ViewStyleProps,
   FlexStyle as FlexStyleProps,
 } from '../Css/interfaces';
-import {color} from '@Theme';
+import {color} from '../../../Theme';
 
 const inputBaseCss = `
 padding-horizontal: ${suffixPx(20)};

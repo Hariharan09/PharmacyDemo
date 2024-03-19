@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image} from '@Components';
+import {Image} from '../../../Components';
 import {ImageViewProps} from './interfaces';
 function ImageView({variant, source, isUri, ...props}: ImageViewProps) {
   return (

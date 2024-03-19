@@ -15,10 +15,9 @@ export const NAVIGATE_SCREEN = {
   splash: 'splash',
   otp: 'otp',
   home: 'home',
-  'home-tab': 'home-tab',
+  'homes-tab': 'homes-tab',
   category: 'category',
   profile: 'profile',
-  'demo-screen': 'demo-screen',
 };
 
 export const NAVIGATE_TAB = {

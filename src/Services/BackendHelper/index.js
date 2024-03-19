@@ -1,4 +1,4 @@
-import {URL_VALIDATE_USER, post, URL_SUBMIT_LOGIN_OTP} from '@Services';
+import {URL_VALIDATE_USER, post, URL_SUBMIT_LOGIN_OTP} from '../../Services';
 
 /**
  * Assoctation

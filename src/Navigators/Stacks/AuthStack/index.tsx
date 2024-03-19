@@ -5,7 +5,6 @@ import {Splash, Login, Otp} from '../../../Modules';
 export type AuthStackParamList = {
   splash: undefined;
   login: undefined;
-  register: undefined;
   otp: undefined;
 };
 

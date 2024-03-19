@@ -1,6 +1,6 @@
 import React from 'react';
-import {Container, Text, ImageView} from '@Components';
-import {icons} from '@Assets';
+import {Container, Text, ImageView} from '../../../Components';
+import {icons} from '../../../Assets';
 import {CartCountProps} from './interfaces';
 
 const CartCount = ({itemCount}: CartCountProps) => {

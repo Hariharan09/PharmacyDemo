@@ -14,11 +14,12 @@ import {
 } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {navigationRef, useBackButtonHandler} from '../NavigationUtilities';
-import {AuthStack, HomeStack} from '../Stacks';
+import {AuthStack} from '../Stacks';
+import {HomeTab} from '../Tabs';
 
 export type NavigatorParamList = {
   'auth-stack': undefined;
-  'home-stack': undefined;
+  'home-tab': undefined;
 };
 const INITIAL_STACK = 'auth-stack';
 
@@ -41,7 +42,7 @@ export const AppNavigator = (props: NavigationProps) => {
           headerShown: false,
         }}>
         <AppStack.Screen name={INITIAL_STACK} component={AuthStack} />
-        <AppStack.Screen name={'home-stack'} component={HomeStack} />
+        <AppStack.Screen name={'home-tab'} component={HomeTab} />
       </AppStack.Navigator>
     </NavigationContainer>
   );

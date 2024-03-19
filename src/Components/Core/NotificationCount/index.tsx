@@ -1,6 +1,6 @@
-import {icons} from '@Assets';
-import {Container, Text, ImageView} from '@Components';
-import {color} from '@Theme';
+import {icons} from '../../../Assets';
+import {Container, Text, ImageView} from '../../../Components';
+import {color} from '../../../Theme';
 import React from 'react';
 import {NotifyCountProps} from './interfaces';
 

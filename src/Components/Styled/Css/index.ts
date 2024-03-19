@@ -12,8 +12,8 @@ import {
   FlatListProps,
 } from './interfaces';
 
-import {suffixPx, parseTransformCss} from '@Utils/Helper';
-import {color} from '@Theme';
+import {suffixPx, parseTransformCss} from '../../../Utils';
+import {color} from '../../../Theme';
 
 // values that are used multile places
 const vars: VarsProps = {

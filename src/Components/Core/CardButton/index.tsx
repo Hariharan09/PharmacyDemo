@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
-import {Container, Text, Touchable, ImageView} from '@Components';
-import {icons} from '@Assets';
+import {Container, Text, Touchable, ImageView} from '../../../Components';
+import {icons} from '../../../Assets';
 import {CartButtonProps} from './interface';
 
 const CardButton: FC<CartButtonProps> = ({title, onPress, toggle = false}) => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import {ButtonProps} from './interfaces';
-import {ButtonText, ButtonTouchable, ImageView} from '@Components';
-import {icons} from '@Assets';
+import {ButtonText, ButtonTouchable, ImageView} from '../../../Components';
+import {icons} from '../../../Assets';
 
 const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
