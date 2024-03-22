@@ -20,6 +20,8 @@ export type Variants =
   | 'image-picker'
   | 'grey'
   | 'rounded-notify'
+  |'square-location'
+  |'medium-card'
   | 'small-card';
 
 export interface ContainerProps {

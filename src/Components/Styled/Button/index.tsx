@@ -32,7 +32,7 @@ import {
 } from '../Css/interfaces';
 
 const CatalinaBlueBg = `
-  background-color: ${color.green};
+  background-color: ${color.primaryButton};
 `;
 
 const getContainerBaseVariant = `

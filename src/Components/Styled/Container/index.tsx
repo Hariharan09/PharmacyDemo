@@ -39,18 +39,27 @@ const containerStyle = {
   `,
   card: css`
     ${getContainerBaseVariant}
-    background-color: ${color.white};
+    /* background-color: ${color.white}; */
     /* width: ${suffixPx(100)};
     padding: ${suffixPx(10)}; */
     padding-vertical: ${suffixPx(30)};
     padding-horizontal: ${suffixPx(20)};
+    border: ${suffixPx(2)};
+    border-color: ${color.ActionGrey};
   `,
   'small-card': css`
     ${getContainerBaseVariant}
     background-color: ${color.white};
+    height: ${suffixPx(100)};
     width: ${suffixPx(100)};
-    margin: ${suffixPx(10)};
-    padding: ${suffixPx(10)};
+    border-color: ${color.offWhite};
+    border-radius: ${suffixPx(20)};
+  `,
+    'medium-card': css`
+    ${getContainerBaseVariant}
+    height: ${suffixPx(180)};
+    width: ${suffixPx(180)};
+    border-radius: ${suffixPx(20)};
   `,
   'card-search': css`
     ${getContainerBaseVariant}
@@ -58,7 +67,7 @@ const containerStyle = {
     justify-content: center;
     align-items: center;
     height: ${suffixPx(50)};
-    border-radius: ${suffixPx(25)};
+    border-radius: ${suffixPx(5)};
   `,
   'rounded-cart': css`
     background-color: ${color.primaryButton};
@@ -68,7 +77,7 @@ const containerStyle = {
   `,
 
   'rounded-cart-count': css`
-    background-color: ${color.smallButtonColor};
+    background-color: ${color.angry};
     width: ${suffixPx(15)};
     height: ${suffixPx(15)};
     border-radius: ${suffixPx(7.5)};
@@ -90,10 +99,29 @@ const containerStyle = {
   `,
 
   'rounded-notify': css`
-    background-color: ${color.primary};
-    width: ${suffixPx(30)};
-    height: ${suffixPx(30)};
-    border-radius: ${suffixPx(15)};
+    background-color: ${color.white};
+    width: ${suffixPx(35)};
+    height: ${suffixPx(35)};
+    border-radius: ${suffixPx(10)};
+    align-items: center;
+    justify-content: center;
+    border: ${suffixPx(2)};
+    border-color: ${color.ActionGrey};
+  `,
+  'square-location': css`
+    background-color: ${color.shadowBlue};
+    width: ${suffixPx(35)};
+    height: ${suffixPx(35)};
+    border-radius: ${suffixPx(5)};
+    align-items: center;
+    justify-content: center;
+  `,
+
+  'square-cart': css`
+    background-color: ${color.ActionGrey};
+    width: ${suffixPx(35)};
+    height: ${suffixPx(35)};
+    border-radius: ${suffixPx(5)};
     align-items: center;
     justify-content: center;
   `,
@@ -115,15 +143,14 @@ const containerStyle = {
   `,
   'tool-bar': css`
     height: ${suffixPx(50)};
-    background-color: ${color.ufoGreen};
+    background-color: ${color.primary};
   `,
   add: css`
     margin-top: ${suffixPx(10)};
     margin-right: ${suffixPx(20)};
-    padding-vertical: ${suffixPx(9)};
+    padding-vertical: ${suffixPx(15)};
     padding-horizontal-: ${suffixPx(35)};
     border-radius: ${suffixPx(50)};
-    background-color: ${color.black};
     align-self: baseline;
   `,
   select: css`
@@ -146,7 +173,7 @@ const containerStyle = {
   `,
   screen: css`
     flex: 1;
-    background-color: ${color.ActionGrey};
+    background-color: ${color.white};
   `,
   'screen-gray': css`
     flex: 1;
@@ -174,7 +201,7 @@ const containerStyle = {
     left: 0;
     right: 0;
     bottom: ${suffixPx(20)};
-    background-color: ${color.wageningenGreen};
+    background-color: ${color.secondary};
     flex-direction: row;
     justify-content: space-between;
     margin-horizontal: ${suffixPx(30)};
@@ -219,13 +246,13 @@ const containerStyle = {
 
 const getContainerVariant = (variant: Variants) => containerStyle[variant];
 
-const Container = styled(View) <
+const Container = styled(View)<
   ViewProps &
-  ShadowStyleIOSProps &
-  TransformsStyleProps &
-  FlexStyleProps &
-  ViewStyleProps &
-  ContainerProps
+    ShadowStyleIOSProps &
+    TransformsStyleProps &
+    FlexStyleProps &
+    ViewStyleProps &
+    ContainerProps
 >`
   ${props => props.variant && getContainerVariant(props.variant)}
   ${ShadowStyleIOS}

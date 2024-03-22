@@ -1,9 +1,10 @@
 import {Container, Header, ImageView, Text} from '../../../../Components';
 import React from 'react';
+import { color } from '../../../../Theme';
 const Profile: React.FC<{}> = ({}) => {
   return (
     <>
-      <Header heading={'profile'} />
+      <Header variant={'companyHeader'} heading={'profile'} />
       <Container flex={1} padding={20}>
         <Container flex-as={'center'}>
           <ImageView

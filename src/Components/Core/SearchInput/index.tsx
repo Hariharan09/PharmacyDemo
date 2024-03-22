@@ -54,7 +54,8 @@ const SearchInput: React.FC<SearchInputProps> = ({
       variant={'card-search'}
       flex-d={'row'}
       flex-jc={'space-evenly'}
-      flex-ac={'stretch'}>
+      flex-ac={'stretch'}
+      elevation={5}>
       <Touchable
         flex-jc={'center'}
         margin-l={15}
