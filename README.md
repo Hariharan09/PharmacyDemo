@@ -27,20 +27,20 @@ src/
 
 ## 🖼️ Screenshots
 
-### 🧠 App Logo
-![Logo](../Assests/ScreenShots/logo.png)
+### 🔐 Login Screen  
+![Login](./src/Assets/ScreenShots/Login.png)
 
-### 🔐 Login Screen
-![Login](./assets/screenshots/LogIn.png)
+### 🔑 OTP Screen  
+![OTP](./src/Assets/ScreenShots/Otp.png)
 
-### 🔑 OTP Verification Screen
-![OTP](./assets/screenshots/Otp.png)
+### 🏠 Home Screen  
+![Home](./src/Assets/ScreenShots/Home.png)
 
-### 🏠 Home Screen
-![Home](./assets/screenshots/Home.png)
+### 🗂️ Category Screen  
+![Category](./src/Assets/ScreenShots/Category.png)
 
-### 🗂️ Category Screen
-![Category](./assets/screenshots/Category.png)
+### 👤 Profile Screen  
+![Profile](./src/Assets/ScreenShots/Profile.png)
 
-### 👤 Profile Screen
-![Profile](./assets/screenshots/Profile.png)
+### 🧠 Logo  
+![Logo](./src/Assets/ScreenShots/Logo.png)
