@@ -24,3 +24,23 @@ src/
 ├── assets/
 ├── navigation/
 └── App.js
+
+## 🖼️ Screenshots
+
+### 🧠 App Logo
+![Logo](./assets/screenshots/Logo.png)
+
+### 🔐 Login Screen
+![Login](./assets/screenshots/LogIn.png)
+
+### 🔑 OTP Verification Screen
+![OTP](./assets/screenshots/Otp.png)
+
+### 🏠 Home Screen
+![Home](./assets/screenshots/Home.png)
+
+### 🗂️ Category Screen
+![Category](./assets/screenshots/Category.png)
+
+### 👤 Profile Screen
+![Profile](./assets/screenshots/Profile.png)
