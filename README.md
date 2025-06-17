@@ -28,7 +28,7 @@ src/
 ## 🖼️ Screenshots
 
 ### 🧠 App Logo
-![Logo](./assets/screenshots/logo.png)
+![Logo](../Assests/ScreenShots/logo.png)
 
 ### 🔐 Login Screen
 ![Login](./assets/screenshots/LogIn.png)
